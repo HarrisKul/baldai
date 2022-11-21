@@ -23,7 +23,7 @@ const Header = (props) => {
 
                     <>
                              <li className="nav-item">
-                    <Link to="/new-post" className="nav-link" aria-current="page">Add new book</Link>
+                    <Link to="/new-post" className="nav-link" aria-current="page">Add product</Link>
                 </li>
                 <li className="nav-item">
                     <Link to='/logout' className="nav-link"
@@ -38,7 +38,7 @@ const Header = (props) => {
                     <Link to="/register" className="nav-link" aria-current="page">Register</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/login" className="nav-link" aria-current="page">Login as</Link>
+                    <Link to="/login" className="nav-link" aria-current="page">Login</Link>
                 </li>
                 </>
                   )}
