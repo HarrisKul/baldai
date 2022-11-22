@@ -52,18 +52,18 @@ ul.nav li:hover > a::after {
 ul.nav li .nav-link:active,
 ul.nav li .nav-link:focus,
 ul.nav li .nav-link:hover {
-    color: white;
+    color: antiquewhite;
 }
 
-ul.nav li .nav-link-active {
+/* ul.nav li .nav-link-active {
     color: #ff5f91;
-}
+} */
 
-ul.nav li .nav-link-active:active,
+/* ul.nav li .nav-link-active:active,
 ul.nav li .nav-link-active:focus,
 ul.nav li .nav-link-active:hover {
-    color: white;
-}
+    color: rgb(106, 36, 36);
+} */
 
 ul.nav li {
     position: relative;
@@ -77,7 +77,7 @@ ul.nav li:hover > ul {
 ul.nav li > ul {
     position: absolute;
     left: 0;
-    background: rgba(33,37,41);
+    background: #777769;
     top: 41px;
     width: 200px;
     margin: 0;
@@ -85,6 +85,7 @@ ul.nav li > ul {
     overflow: hidden;
     max-height: 0;
     transition: all .2s ease-in-out;
+    border-radius: 15px;
 }
 
 ul.nav li > ul > li > a {
@@ -99,4 +100,8 @@ ul.nav li > ul > li > a::after {
 ul.nav li > ul > li > a:hover {
     text-decoration: underline;
 }
+
+
+
+
 

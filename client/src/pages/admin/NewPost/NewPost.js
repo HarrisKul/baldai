@@ -53,18 +53,13 @@ const NewPost = () => {
                     {alert.message}
                 </div>
             )}
-            <h1>Start your fundraiser now!</h1>
+            <h1>Add new product</h1>
             
             <form onSubmit={handleSubmit}>
                 <div className="form-control">
-                    <label for="title">Title</label>
+                    <label for="name">Name</label>
                     <br></br>
-                    <input type="text" name="title" id="title" onChange={handleForm} />
-                </div>
-                <div className="form-control">
-                    <label for="city">City</label>
-                    <br></br>
-                    <input type="text" name="city" id="city" onChange={handleForm} />
+                    <input type="text" name="name" id="name" onChange={handleForm} />
                 </div>
                 <div className="form-control">
                     <label for="photo">Photo</label>
@@ -72,16 +67,17 @@ const NewPost = () => {
                     <input type="url" name="photo" id="photo" onChange={handleForm} />
                 </div>
                 <div className="form-control">
+                    <label for="price">Price</label>
+                    <br></br>
+                    <input type="text" name="price" id="price" onChange={handleForm} />
+                </div>
+                <div className="form-control">
                     <label for="description">Description</label>
                     <br></br>
                     <textarea name="description" id="description" cols="30" rows="10" onChange={handleForm}></textarea>
                 </div>
-                <div className="form-control">
-                    <label for="sum">Your goal:</label>
-                    <br></br>
-                    <input type="text" name="sum" id="sum" onChange={handleForm} />
-                </div>
-                <button type="submit">Submit</button>
+   
+                <button type="submit">Add</button>
             </form>
         </div>
     )

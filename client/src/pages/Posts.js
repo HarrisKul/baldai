@@ -43,7 +43,7 @@ const Posts = () => {
                     <img className='product-img' src={post.photo} alt={post.name} />
                     <p>{post.description}</p>
                     <p> Price: {post.price} Eur
-                    <button className='button'><Link to={'/'}>Order</Link> </button>
+                    <button className='button'><Link to={'/login'}>Order</Link> </button>
                     </p>
                 </div>
                     

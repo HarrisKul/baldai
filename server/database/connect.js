@@ -37,7 +37,7 @@ try {
     await sequelize.sync({ alter: true })
 } catch(error) {
     console.log(error)
-    console.log('Nepavyko prisijungti prie duomenų bazės');
+    console.log('Error connecting to database');
 }
 
 export default database

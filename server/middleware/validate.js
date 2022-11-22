@@ -12,22 +12,22 @@ const validate = (schema, req, res, next) => {
     if(error) {
        switch(error.details[0].path[0]) {
         case 'first_name':
-          message = 'Neteisingas vardas'
+          message = 'Invalid first name'
           break
         case 'last_name':
-          message = 'Neteisingai nurodyta pavardė'
+          message = 'Invalid last name'
           break
         case 'email':
-          message = 'Neteisingai nurodytas el. paštas'
+          message = 'Invalid email'
           break
         case 'password':
-          message = 'Neteisingai nurodytas slaptažodis'
+          message = 'Invalid password'
           break
         case 'title':
-          message = 'Neteisingai uzpildytas pavadinimas'
+          message = 'Invalid title'
            break
         default:
-          message = 'Neteisingai uzpildyti laukeliai'
+          message = 'Invalid data provided'
           break
         }
         return res.status(500).send(message)

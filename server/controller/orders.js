@@ -23,7 +23,7 @@ Router.get('/', adminAuth, async (req, res) => {
         res.json(orders)
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida')
+        res.status(500).send('Error')
     }
 })
 
@@ -48,7 +48,7 @@ Router.get('/user/', auth, async (req, res) => {
         res.json(orders)
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida')
+        res.status(500).send('Error')
     }
 })
 
@@ -58,7 +58,7 @@ Router.get('/single/:id', adminAuth, async (req, res) => {
         res.json(orders)
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida išssaugant duomenis')
+        res.status(500).send('Error')
     }
 })
 
@@ -67,10 +67,10 @@ Router.post('/new', auth, ordersValidator, async (req, res) => {
         req.body.userId = req.session.user.id
         
         await db.Orders.create(req.body)
-        res.send('Užsakymas sėkmingai sukurtas')
+        res.send('Order has been created')
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida išssaugant duomenis')
+        res.status(500).send('Error saving data')
     }
 })
 
@@ -78,10 +78,10 @@ Router.put('/edit/:id', adminAuth, ordersValidator, async (req, res) => {
     try {
         const order = await db.Orders.findByPk(req.params.id)
         await order.update(req.body)
-        res.send('Užsakymas sėkmingai atnaujintas')
+        res.send('Order has been updated')
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida išssaugant duomenis')
+        res.status(500).send('Error saving data')
     }
 })
 
@@ -89,10 +89,10 @@ Router.delete('/delete/:id', adminAuth, async (req, res) => {
     try {
         const order = await db.Orders.findByPk(req.params.id)
         await order.destroy()
-        res.send('Užsakymas sėkmingai ištrintas')
+        res.send('Order has been deleted')
     } catch(error) {
         console.log(error)
-        res.status(500).send('Įvyko klaida')
+        res.status(500).send('Error')
     }
 })
 
